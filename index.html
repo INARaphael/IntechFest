@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinEDU</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<style>
+ul.list-image-checkmark {
+  list-style-image: url('../Asset/checkmark.svg');
+}
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+</style>
+<body class="m-0 p-0 box-border font-Poppins bg-primary">
+    <!-- Navbar start -->
+    <nav class="w-full h-24 bg-transparent flex justify-between items-center px-8 fixed top-0 left-0 z-50">
+        <div class="w-fit"><img src="Asset/logo.svg" alt="Logo" class="w-28"></div>
+        <div class="flex items-center gap-3 md:gap-8">
+            <ul class="space-x-8 text-white hidden md:flex">
+                <li><a href="#home" class="hover:text-gray-300 font-bold lg:text-lg xl:text-xl">Beranda</a></li>
+                <li><a href="#about" class="hover:text-gray-300 font-bold lg:text-lg xl:text-xl">Tentang</a></li>
+                <li><a href="#services" class="hover:text-gray-300 font-bold lg:text-lg xl:text-xl" >Program</a></li>
+            </ul>
+            <div>
+                <a href="page/GetStart.html">
+                    <button class="bg-white text-primary px-4 py-2 rounded font-bold hover:bg-primary-light hover:text-white g:text-lg xl:text-xl">Get Start</button>
+                </a>
+            </div>
+            <div>
+                <img src="Asset/menu.svg" alt="Menu" class="w-8 h-8 md:hidden cursor-pointer" id="menu-button" onclick="toggleMenu()">
+                <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-primary-light text-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+                    <div class="flex justify-end p-4">
+                        <button onclick="toggleMenu()" aria-label="Close menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col space-y-6 mt-8 ml-8 text-lg">
+                        <li><a href="#home" class="font-bold hover:text-gray-300" onclick="toggleMenu()">Beranda</a></li>
+                        <li><a href="#about" class="font-bold hover:text-gray-300" onclick="toggleMenu()">Tentang</a></li>
+                        <li><a href="#services" class="font-bold hover:text-gray-300" onclick="toggleMenu()">Program</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- NavBar End -->
+<!-- Hero Start -->
+<div class="flex flex-col relative w-full h-screen justify-center items-center  md:justify-start xl:pl-4 xl:h-full xl:pb-20 " id="home">
+    <img src="Asset/heroBg.webp" alt="Hero Background" class="w-full h-full object-cover brightness-50 absolute top-0 left-0 z-0 opacity-80">
+    <div class="relative z-10 px-4 flex flex-col items-center justify-center mt-10 md:mt-32 md:items-start xl:h-full xl:w-[90%]">
+        <h1 class="w-full text-center xl:text-start align-top text-white text-wrap font-bold text-4xl md:text-7xl xl:w-[95%] xl:text-8xl/30">Kuasai Masa Depanmu melalui Literasi Finansial</h1>
+        <div class="flex flex-col justify-center items-start gap-6 px-4 mt-12 md:justify-start xl:flex-row h-full">
+            <div class="xl:w-1/2 xl:gap-10">
+                <p class="text-white text-center mt-4 md:text-xl xl:text-start xl:text-3xl/15">Didik diri Anda untuk membuat keputusan finansial yang lebih cerdas dan mencapai kebebasan ekonomi</p>
+                <div class="mt-6 flex flex-col gap-4 w-full justify-center xl:items-start items-center">
+                    <button class="md:text-2xl md:h-20 w-[80%] xl:w-[50%] bg-white text-primary px-6 py-3 rounded-4xl font-bold hover:bg-primary-light hover:text-white"><a href="page/GetStart.html">Mulai Sekarang</a></button>
+                    <button class="md:text-2xl md:h-20 w-[80%] xl:w-[50%] bg-primary-light text-white px-6 py-3 rounded-4xl font-bold hover:bg-white hover:text-primary-light"> <a href="#services">Lihat Program</a></button>
+                </div>
+            </div>
+            <div class=" w-1/2 mt-20 justify-center items-center text-white hidden xl:flex flex-col gap-20 text-center">
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="font-Poppins font-bold text-3xl md:text-5xl">10K+</h1>
+                    <p class="md:text-2xl">Anak Muda Telah Bergabung</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="font-Poppins font-bold text-3xl md:text-5xl">95%</h1>
+                    <p class="md:text-2xl">Menigkatkan Literasi Finansial</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="font-Poppins font-bold text-3xl md:text-5xl">Rp2.1M</h1>
+                    <p class="md:text-2xl">Rata-Rata Tabungan dalam Satu Tahun</p>
+                </div>
+            </div>
+
+    <!-- Mobile View -->
+    <div id="stats-slider" class="mt-10 flex w-full justify-center items-center text-white relative overflow-hidden xl:hidden" style="height: 90px;">
+        <div class="flex flex-col justify-center items-center stat-slide transition-all duration-700 opacity-100 translate-x-0 absolute left-0 right-0 mx-auto">
+            <h1 class="font-Poppins font-bold text-3xl md:text-5xl">10K+</h1>
+            <p class="md:text-2xl">Anak Muda Telah Bergabung</p>
+        </div>
+        <div class="flex flex-col justify-center items-center stat-slide transition-all duration-700 opacity-0 translate-x-full absolute left-0 right-0 mx-auto pointer-events-none">
+            <h1 class="font-Poppins font-bold text-3xl md:text-5xl">95%</h1>
+            <p class="md:text-2xl">Menigkatkan Literasi Finansial</p>
+        </div>
+        <div class="flex flex-col justify-center items-center stat-slide transition-all duration-700 opacity-0 translate-x-full absolute left-0 right-0 mx-auto pointer-events-none">
+            <h1 class="font-Poppins font-bold text-3xl md:text-5xl">Rp2.1M</h1>
+            <p class="md:text-2xl">Rata-Rata Tabungan dalam Satu Tahun</p>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<!-- Hero END -->
+ <!-- about Start -->
+<div id="about" class="w-full h-fit bg-primary-light flex flex-col items-center pb-10">
+  
+  <!-- Bungkus jadi grid: teks + kartu -->
+  <div class="grid xl:grid-cols-3 gap-10 xl:gap-0 px-4 md:px-10 xl:px-24 mt-24 items-center w-full">
+    
+    <!-- Bagian Teks -->
+    <div class="text-center xl:text-left xl:col-span-2">
+      <h1 class="text-white font-bold text-3xl xl:text-7xl/25">
+        Mengapa Edukasi Finansial Penting?
+      </h1>
+      <p class="text-xs md:text-sm p-3 xl:p-0 text-white xl:text-2xl/15">
+        Di usia 20-an, keputusan finansial yang kamu buat hari ini akan menentukan masa depanmu. 
+        Mari bangun fondasi yang kuat bersama!
+      </p>
+    </div>
+
+    <!-- Bagian Kartu -->
+    <div class="w-full h-full flex flex-col md:flex-row gap-6 xl:grid xl:grid-cols-2 items-center ">
+      
+      <!-- Card 1 -->
+      <div class="bg-white w-[90%]  xl:w-full rounded-2xl shadow-2xl shadow-black h-full xl:h-fit xl:min-h-[100px]: md:min-h-[276px] p-3 xl:col-span-2">
+        <div class="w-fit h-fit flex items-center mb-3 bg-green-200 rounded-2xl">
+          <img src="Asset/piggy-bank.svg" alt="About Image 1" class="w-16 h-16 p-2" loading="lazy">
+        </div>
+        <h2 class="font-bold text-xl mb-2">Bangun Dana Darurat</h2>
+        <p class="text-sm font-semibold">
+          Siapkan dana darurat 3-6 bulan pengeluaran untuk menghadapi situasi tak terduga dengan tenang.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white w-[90%] xl:w-full rounded-2xl shadow-2xl shadow-black h-full md:min-h-[276px] p-3">
+        <div class="w-fit h-fit flex items-center mb-3 bg-blue-200 rounded-2xl">
+          <img src="Asset/chart-line.svg" alt="About Image 2" class="w-16 h-16 p-2"loading="lazy">
+        </div>
+        <h2 class="font-bold text-xl mb-2">Hindari Hutang Konsumtif</h2>
+        <p class="text-sm font-semibold">
+          Pelajari cara mengelola pengeluaran dan menghindari jebakan hutang yang merugikan masa depan.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white w-[90%] xl:w-full rounded-2xl shadow-2xl shadow-black h-full md:min-h-[276px] p-3">
+        <div class="w-fit h-fit flex items-center mb-3 bg-purple-200 rounded-2xl">
+          <img src="Asset/seedling.svg" alt="About Image 3" class="w-16 h-16 p-2" loading="lazy">
+        </div>
+        <h2 class="font-bold text-xl mb-2">Investasi Sejak Dini</h2>
+        <p class="text-sm font-semibold">
+          Manfaatkan kekuatan compound interest dengan mulai berinvestasi sedini mungkin
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- About End -->
+<!-- Program Start -->
+ <div id="services" class="flex flex-col relative w-full h-screen items-center max-h-[900px]">
+   <img src="Asset/Program.webp" alt="" loading="lazy" class="w-full h-screen max-h-[900px] object-cover brightness-50 absolute top-0 left-0 z-0 opacity-80">
+    <div class="z-10 flex flex-col items-center mt-24 w-full h-full xl:mt-40">
+        <h1 class="w-full text-center align-top text-white text-wrap font-bold text-3xl md:text-4xl xl:text-6xl">Program Edukasi Kami</h1>
+        <p class="text-xs p-3 align-middle text-center text-white xl:text-xl">Materi yang dirancang khusus untuk membantu anak muda menguasai dasar-dasar keuangan pribadi</p>
+       <div class="overflow-x-scroll overflow-y-hidden w-[90%] xl:w-[95%] h-96 mt-20 scrollbar-hide gap-6 flex  xl:justify-center">
+        <div class="w-80 xl:w-[30%] h-full bg-white rounded-2xl flex flex-col flex-shrink-0 shadow-2xl shadow-black">
+            <div class="w-fit h-fit bg-blue-200 rounded-2xl m-3 flex items-center p-2">
+                 <img src="Asset/program1.svg" alt="Program Image 1" class="w-14 object-cover rounded-l-2xl" loading="lazy">
+            </div>
+            <div class="w-full p-2 flex flex-col justify-between h-full">
+                <h2 class="font-bold text-3xl text-blue-800 pl-4 xl:text-4xl">Perancangan Anggaran </h2>
+                <ul class="text-lg xl:text-xl font-semibold mb-4 mt-4 pl-8 list-image-checkmark">     
+                     <li>30-20 Rule</li>
+                    <li>Tracking Pengeluaran</li>
+                    <li>Tips Menabung Efektif</li>
+                </ul>
+                <div class="flex justify-center m-4">
+                    <a href="page/GetStart.html" id="1" class="xl:text-xl bg-blue-900 text-white hover:bg-blue-200 hover:text-blue-900 px-4 py-2 rounded font-bold w-full flex justify-center">
+                        <button >Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+        </div>
+       </div>
+        <div class="w-80 xl:w-[30%] h-full bg-white rounded-2xl flex flex-col flex-shrink-0 shadow-2xl shadow-black">
+            <div class="w-fit h-fit bg-green-200 rounded-2xl m-3 flex items-center p-2">
+                 <img src="Asset/program2.svg" alt="Program Image 1" class="w-14 object-cover rounded-l-2xl" loading="lazy">
+            </div>
+            <div class="w-full p-2 flex flex-col justify-between h-full">
+                <h2 class="font-bold text-3xl text-green-800 pl-4 xl:text-4xl">Investasi Dasar </h2>
+                <ul class="text-lg font-semibold mb-4 mt-4 pl-8 list-image-checkmark xl:text-xl">     
+                    <li>Reksadana untuk Pemula</li>
+                    <li>Saham Blue Chip</li>
+                    <li>Risk Management</li>
+                </ul>
+                <div class="flex justify-center m-4">
+                    <a href="page/GetStart.html" id="2" class=" bg-green-900 text-white hover:bg-green-200 hover:text-green-900 px-4 py-2 rounded font-bold w-full xl:text-xl flex justify-center">
+                    <button>Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+        </div>
+       </div>
+        <div class="w-80 xl:w-[30%] h-full bg-white rounded-2xl flex flex-col flex-shrink-0 shadow-2xl shadow-black">
+            <div class="w-fit h-fit bg-purple-200 rounded-2xl m-3 flex items-center p-2">
+                 <img src="Asset/program3.svg" alt="Program Image 1" class="w-14 object-cover rounded-l-2xl" loading="lazy">
+            </div>
+            <div class="w-full p-2 flex flex-col justify-between h-full">
+                <h2 class="font-bold text-3xl text-purple-800 pl-4 xl:text-4xl">Kelola Keuangan </h2>
+                <ul class="text-lg font-semibold mb-4 mt-4 pl-8 list-image-checkmark xl:text-xl">     
+                     <li>Debt Management</li>
+                    <li>Emergency Fund</li>
+                    <li>Retirement Planning</li>
+                </ul>
+                <div class="flex justify-center m-4">
+                    <a href="page/GetStart.html" id="3" class="xl:text-xl bg-purple-900 text-white hover:bg-purple-200 hover:text-purple-900 px-4 py-2 rounded font-bold w-full flex justify-center">
+                    <button >Pelajari Lebih Lanjut</button>
+                </a>
+                </div>
+        </div>
+       </div>
+        
+        
+       </div>
+
+       </div>
+    </div>
+ </div>
+<!-- Program END -->
+
+<!-- Footer Start -->
+  <div class="flex flex-col w-full h-fit p-10 gap-10 justify-between" id="Contact" >
+    <div class="w-full h-fit flex flex-col md:flex-row justify-center items-center gap-6 px-4 md:px-10">
+        <div class="w-full h-full flex justify-center items-center p-10">
+            <img src="Asset/logo.svg" alt="Logo Hitam Putih" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="w-full h-fit flex justify-center items-center mt-5 md:mt-0 gap-6 md:gap-4 xl:gap-14" loading="lazy">
+            <img src="Asset/SVG/square-instagram-brands.svg" alt="Logo Instagram"
+            class="w-10 md:w-14">
+            
+            <img src="Asset/SVG/square-facebook-brands.svg" alt="facebook logo"
+            class="w-10 md:w-14" loading="lazy">
+            
+            <img src="Asset/SVG/square-x-twitter-brands.svg" alt="x-twitter logo"
+            class="w-10 md:w-14" loading="lazy">
+            
+            <img src="Asset/SVG/youtube-brands.svg" alt="youtube" class="w-10 md:w-14" loading="lazy">
+        </div>
+    </div>
+        <div class="text-white text-center py-4 text-sm font-medium">
+            <p>© 2025 Fiancial Education. Menginspirasi Generasi Muda untuk Masa Depan Finansial yang Lebih Baik.</p>
+    <p>Seluruh materi dan konten dilindungi hak cipta. Dilarang menyalin tanpa izin.</p>
+        </div>
+    </div>
+<!-- Footer End -->
+
+
+
+    <script src="src/main.js"></script>
+</body>
+</html>
