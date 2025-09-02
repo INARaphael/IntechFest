@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinEDU</title>
-    <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/output.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
 ul.list-image-checkmark {
@@ -22,7 +22,7 @@ ul.list-image-checkmark {
 <body class="m-0 p-0 box-border font-Poppins bg-primary">
     <!-- Navbar start -->
     <nav class="w-full h-24 bg-transparent flex justify-between items-center px-8 fixed top-0 left-0 z-50">
-        <div class="w-fit"><img src="Asset/logo.svg" alt="Logo" class="w-28"></div>
+        <div class="w-fit"><img src="Asset/logo.svg" alt="Logo" class="w-[70%]"></div>
         <div class="flex items-center gap-3 md:gap-8">
             <ul class="space-x-8 text-white hidden md:flex">
                 <li><a href="#home" class="hover:text-gray-300 font-bold lg:text-lg xl:text-xl">Beranda</a></li>
@@ -58,16 +58,16 @@ ul.list-image-checkmark {
 <div class="flex flex-col relative w-full h-screen justify-center items-center  md:justify-start xl:pl-4 xl:h-full xl:pb-20 " id="home">
     <img src="Asset/heroBg.webp" alt="Hero Background" class="w-full h-full object-cover brightness-50 absolute top-0 left-0 z-0 opacity-80">
     <div class="relative z-10 px-4 flex flex-col items-center justify-center mt-10 md:mt-32 md:items-start xl:h-full xl:w-[90%]">
-        <h1 class="w-full text-center xl:text-start align-top text-white text-wrap font-bold text-4xl md:text-7xl xl:w-[95%] xl:text-8xl/30">Kuasai Masa Depanmu melalui Literasi Finansial</h1>
+        <h1 class="w-full text-center xl:text-start align-top text-white text-wrap font-bold text-4xl md:text-7xl xl:w-[95%] xl:text-8xl/30" data-aos="fade-right">Kuasai Masa Depanmu melalui Literasi Finansial</h1>
         <div class="flex flex-col justify-center items-start gap-6 px-4 mt-12 md:justify-start xl:flex-row h-full">
-            <div class="xl:w-1/2 xl:gap-10">
+            <div class="xl:w-1/2 xl:gap-10" data-aos="fade-right" data-aos-duration="1000">
                 <p class="text-white text-center mt-4 md:text-xl xl:text-start xl:text-3xl/15">Didik diri Anda untuk membuat keputusan finansial yang lebih cerdas dan mencapai kebebasan ekonomi</p>
                 <div class="mt-6 flex flex-col gap-4 w-full justify-center xl:items-start items-center">
                     <button class="md:text-2xl md:h-20 w-[80%] xl:w-[50%] bg-white text-primary px-6 py-3 rounded-4xl font-bold hover:bg-primary-light hover:text-white"><a href="page/GetStart.html">Mulai Sekarang</a></button>
                     <button class="md:text-2xl md:h-20 w-[80%] xl:w-[50%] bg-primary-light text-white px-6 py-3 rounded-4xl font-bold hover:bg-white hover:text-primary-light"> <a href="#services">Lihat Program</a></button>
                 </div>
             </div>
-            <div class=" w-1/2 mt-20 justify-center items-center text-white hidden xl:flex flex-col gap-20 text-center">
+            <div class=" w-1/2 mt-20 justify-center items-center text-white hidden xl:flex flex-col gap-20 text-center" data-aos="fade-left" data-aos-duration="1000">
                 <div class="flex flex-col justify-center items-center">
                     <h1 class="font-Poppins font-bold text-3xl md:text-5xl">10K+</h1>
                     <p class="md:text-2xl">Anak Muda Telah Bergabung</p>
@@ -108,7 +108,7 @@ ul.list-image-checkmark {
   <div class="grid xl:grid-cols-3 gap-10 xl:gap-0 px-4 md:px-10 xl:px-24 mt-24 items-center w-full">
     
     <!-- Bagian Teks -->
-    <div class="text-center xl:text-left xl:col-span-2">
+    <div class="text-center xl:text-left xl:col-span-2" data-aos="fade-up" data-aos-duration="1000">
       <h1 class="text-white font-bold text-3xl xl:text-7xl/25">
         Mengapa Edukasi Finansial Penting?
       </h1>
@@ -119,7 +119,7 @@ ul.list-image-checkmark {
     </div>
 
     <!-- Bagian Kartu -->
-    <div class="w-full h-full flex flex-col md:flex-row gap-6 xl:grid xl:grid-cols-2 items-center ">
+    <div class="w-full h-full flex flex-col md:flex-row gap-6 xl:grid xl:grid-cols-2 items-center " data-aos="fade-up" data-aos-duration="1000">
       
       <!-- Card 1 -->
       <div class="bg-white w-[90%]  xl:w-full rounded-2xl shadow-2xl shadow-black h-full xl:h-fit xl:min-h-[100px]: md:min-h-[276px] p-3 xl:col-span-2">
@@ -163,9 +163,9 @@ ul.list-image-checkmark {
  <div id="services" class="flex flex-col relative w-full h-screen items-center max-h-[900px]">
    <img src="Asset/Program.webp" alt="" loading="lazy" class="w-full h-screen max-h-[900px] object-cover brightness-50 absolute top-0 left-0 z-0 opacity-80">
     <div class="z-10 flex flex-col items-center mt-24 w-full h-full xl:mt-40">
-        <h1 class="w-full text-center align-top text-white text-wrap font-bold text-3xl md:text-4xl xl:text-6xl">Program Edukasi Kami</h1>
-        <p class="text-xs p-3 align-middle text-center text-white xl:text-xl">Materi yang dirancang khusus untuk membantu anak muda menguasai dasar-dasar keuangan pribadi</p>
-       <div class="overflow-x-scroll overflow-y-hidden w-[90%] xl:w-[95%] h-96 mt-20 scrollbar-hide gap-6 flex  xl:justify-center">
+        <h1 class="w-full text-center align-top text-white text-wrap font-bold text-3xl md:text-4xl xl:text-6xl" data-aos="fade-up">Program Edukasi Kami</h1>
+        <p class="text-xs p-3 align-middle text-center text-white xl:text-xl" data-aos="fade-up">Materi yang dirancang khusus untuk membantu anak muda menguasai dasar-dasar keuangan pribadi</p>
+       <div class="overflow-x-scroll overflow-y-hidden w-[90%] xl:w-[95%] h-96 mt-20 scrollbar-hide gap-6 flex  xl:justify-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="w-80 xl:w-[30%] h-full bg-white rounded-2xl flex flex-col flex-shrink-0 shadow-2xl shadow-black">
             <div class="w-fit h-fit bg-blue-200 rounded-2xl m-3 flex items-center p-2">
                  <img src="Asset/program1.svg" alt="Program Image 1" class="w-14 object-cover rounded-l-2xl" loading="lazy">
@@ -232,10 +232,9 @@ ul.list-image-checkmark {
 <!-- Footer Start -->
   <div class="flex flex-col w-full h-fit p-10 gap-10 justify-between" id="Contact" >
     <div class="w-full h-fit flex flex-col md:flex-row justify-center items-center gap-6 px-4 md:px-10">
-        <div class="w-full h-full flex justify-center items-center p-10">
-            <img src="Asset/logo.svg" alt="Logo Hitam Putih" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="w-full h-fit flex justify-center items-center mt-5 md:mt-0 gap-6 md:gap-4 xl:gap-14" loading="lazy">
+        <div class="flex justify-center items-center p-10 overflow-hidden">
+    <img src="Asset/logo.svg" alt="Logo" class="w-[400px] object-contain" loading="lazy"></div>
+        <div class="w-full h-fit flex justify-center items-center mt-5 md:mt-0 gap-6 md:gap-4 xl:gap-14  xl:justify-end " loading="lazy">
             <img src="Asset/SVG/square-instagram-brands.svg" alt="Logo Instagram"
             class="w-10 md:w-14">
             
@@ -255,8 +254,11 @@ ul.list-image-checkmark {
     </div>
 <!-- Footer End -->
 
-
-
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="server.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>
